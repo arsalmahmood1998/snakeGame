@@ -32,5 +32,16 @@ void playGame() {
   }
   if (collision) {
     score+=2;
+  }  
+}
+boolean gameEnd(){
+  boolean gameEnd=false;
+  if(snakeStartLocation.x<=0 ||snakeStartLocation.y<=0){
+    gameEnd=true;
   }
+  else if(snakedWidth.x>=width ||  snakedWidth.y>=height){
+    gameEnd=true;
+  }
+  return gameEnd; 
+  
 }
